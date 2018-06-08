@@ -1,0 +1,11 @@
+.menu {
+  background: black;
+  mix-blend-mode: screen;
+
+  &__list {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 600px;
+  }
+}

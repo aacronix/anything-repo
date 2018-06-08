@@ -1,0 +1,106 @@
+.burger {
+  position: relative;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  background: rgba($colorGallery, .2);
+  mix-blend-mode: screen;
+  transition: background $animationSpeedFast linear;
+
+  &.-radial {
+    border-radius: 50%;
+  }
+
+  &.-smooth {
+    border-radius: 30px;
+  }
+
+  &.-theme {
+    &_corall {
+      background: $colorSalmon;
+    }
+
+    &_fringy-flower {
+      background: $colorFringyFlower;
+    }
+
+    &_persimmon {
+      background: $colorPersimmon;
+    }
+
+    &_cerulean {
+      background: $colorCerulean;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    z-index: 2;
+    width: $burgerLineWidth;
+    left: $burgerLineOffset;
+    right: $burgerLineOffset;
+    height: $burgerLineHeight;
+    background: $colorBlack;
+
+    @include is-ie() {
+      background: $colorMineShaft;
+    }
+
+    &.-first {
+      top: calc((100% / 3) - #{$burgerLineHeight} * 2);
+    }
+
+    &.-second {
+      top: calc((100% / 2) - #{$burgerLineHeight} / 2);
+    }
+
+    &.-third {
+      top: calc((100% / 3) * 2 + #{$burgerLineHeight});
+    }
+  }
+
+  &:hover {
+    background: rgba($colorGallery, 1);
+    transition: background $animationSpeedFast linear;
+  }
+
+  &.-active {
+    .burger {
+      &__line {
+        //transition: all $animationSpeedFast linear;
+        //background: lighten($colorGray, .5);
+
+        &.-first {
+          animation: burger-first-line $animationSpeedNormal forwards;
+        }
+
+        &.-second {
+          animation: burger-second-line $animationSpeedNormal forwards;
+        }
+
+        &.-third {
+          animation: burger-third-line $animationSpeedNormal forwards;
+        }
+      }
+    }
+  }
+
+  &.-folded {
+    .burger {
+      &__line {
+        &.-first {
+          animation: burger-first-line-rev $animationSpeedNormal forwards;
+        }
+
+        &.-second {
+          animation: burger-second-line-rev $animationSpeedNormal forwards;
+        }
+
+        &.-third {
+          animation: burger-third-line-rev $animationSpeedNormal forwards;
+        }
+      }
+    }
+  }
+}

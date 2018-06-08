@@ -9,23 +9,23 @@
 <div class="wrapper">
     <div class="slider -main">
         <picture>
-            <source srcset="/assets/images/image-1.jpg" media="(min-width: 600px)">
+            <source srcset="./assets/images/image-1.jpg" media="(min-width: 600px)">
             <img class="image"  src="/assets/images/image-1.jpg" alt="MDN">
         </picture>
         <picture>
-            <source srcset="/assets/images/image-2.jpg" media="(min-width: 600px)">
+            <source srcset="./assets/images/image-2.jpg" media="(min-width: 600px)">
             <img class="image"  src="/assets/images/image-2.jpg" alt="MDN">
         </picture>
         <picture>
-            <source srcset="/assets/images/image-3.jpg" media="(min-width: 600px)">
+            <source srcset="./assets/images/image-3.jpg" media="(min-width: 600px)">
             <img class="image"  src="/assets/images/image-3.jpg" alt="MDN">
         </picture>
         <picture>
-            <source srcset="/assets/images/image-4.jpg" media="(min-width: 600px)">
+            <source srcset="./assets/images/image-4.jpg" media="(min-width: 600px)">
             <img class="image" src="/assets/images/image-4.jpg" alt="MDN">
         </picture>
         <picture>
-            <source srcset="/assets/images/image-5.jpg" media="(min-width: 600px)">
+            <source srcset="./assets/images/image-5.jpg" media="(min-width: 600px)">
             <img class="image" src="/assets/images/image-5.jpg" alt="MDN">
         </picture>
     </div>
